@@ -80,9 +80,46 @@ We can say that the best two regressive model are also the H-W models.
 
 ## Pike
 
+```{r}
+library(leaps)
+regsubsets.out <-
+  regsubsets(Weight ~.,
+                             data=Pike,
+                             nbest=1,
+                             force.in=NULL,force.out=NULL,
+                             method="exhaustive")
+summary.out<-summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+
+```
+
+```{r}
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend = "bottom",main="adjustedR^2")
+
+
+```
+
 ### Best Models
 
+We can say that the best model is the 5-element model L1-L2-L3-H-W
+
+
+
 ### Best Two regressor model
+
+The best two regressor model is L1-L3 models.   
+What this means is that the best model is different to the best two regressor model. Therefore, we have to run ANOVA. 
+
+```{r}
+model5 <- lm(Weight~ . ,data=Pike)
+summary.lm(model5)
+model2=lm(Weight~ .  -Length2-Height-Width, data=Pike)
+model3=lm(Weight~ .  -Length2-Height-Width, data=Pike)
+anova(model5,model2)
+
+```
+
 
 ## Roach
 
