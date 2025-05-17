@@ -151,3 +151,5 @@ It seems like the best model is model2, which is the L3 and W models.
 The Best two regressor models is also model2, being L3-W models. 
 
 ## Final Summary Statements
+
+As you can see, for the perch and roach, the vest models and the best two regressor models are the same; the model2 for both of them, therefore we don't need to compare or use ANOVA to find the p-value. While Pike had a different best model, which is model 5, corresponding to L1-L2-L3-H-W, and for the best two regressor model is model 2; L1-L3, which means that we have to run ANOVA to find the p-value. and that p value is 8.679e-10. 
