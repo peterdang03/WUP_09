@@ -102,7 +102,7 @@ subsets(regsubsets.out,statistic="adjr2",legend = "bottom",main="adjustedR^2")
 
 ### Best Models
 
-We can say that the best model is the 5-element model L1-L2-L3-H-W
+We can say that the best model is the 5-element model L1-L2-L3-H-W models.
 
 
 
